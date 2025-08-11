@@ -8,8 +8,6 @@ body {
     padding: 0;
 }
 
-/* Correção nos estilos existentes e adição de novos */
-
 /* Layout de duas colunas */
 .main-container {
     display: flex;
@@ -40,7 +38,6 @@ body {
     position: absolute;
     top: 30px;
     right: 30px;
-    left: auto;
     display: flex;
     gap: 30px;
 }
@@ -83,6 +80,29 @@ body {
     margin-bottom: 40px;
 }
 
+/* Grupos de formulário */
+.form-row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox {
+    position: relative;
+}
+
 /* Formulário e Campos de Entrada */
 .login-content {
     text-align: left;
@@ -112,23 +132,32 @@ body {
     color: #8e24aa;
 }
 
+/* Campos com efeito igual ao cadastro */
 .inputLogin input {
     width: 100%;
     padding: 15px 15px 15px 50px;
-    background: #f3e8ff;
+    background: #f3e8ff; /* fundo roxo claro */
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     color: #4a0f81;
+    transition: all 0.3s ease; /* transição suave */
+    outline: none;
 }
 
 .inputLogin input:focus {
-    background: #fff;
-    box-shadow: 0 0 5px rgba(142, 12, 202, 0.5);
+    background: #fff; /* fundo branco ao focar */
+    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5); /* brilho roxo */
+    border: 2px solid #8e24aa; /* borda roxa ao focar */
 }
 
 .inputLogin input::placeholder {
     color: #8e24aa;
+    transition: color 0.3s ease;
+}
+
+.inputLogin input:focus::placeholder {
+    color: #b85cff; /* placeholder mais claro ao focar */
 }
 
 /* Botão de login alinhado com os campos */
@@ -156,14 +185,14 @@ body {
 }
 
 .login-links-container {
-        display: flex;
+    display: flex;
     justify-content: space-between; /* Alinha um link à esquerda e outro à direita */
     margin-top: 10px;
     align-items: center;
 }
 
 .forgot {
-      color: #4a0f81;
+    color: #4a0f81;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s, background 0.3s;
@@ -171,17 +200,14 @@ body {
     padding: 2px 8px;
     line-height: 1.5;
     display: inline-block;
-    margin: 0 0 0 0; /* Remove margens que causam desalinhamento */
     vertical-align: middle;
 }
 
 .forgot:hover {
-  color: #fff;
+    color: #fff;
     background: rgba(106, 27, 154, 0.7); /* Roxo com transparência */
     text-decoration: none;
 }
-
-
 
 .error-message {
     color: red;

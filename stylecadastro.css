@@ -1,0 +1,164 @@
+/* Importa Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Fonte global */
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+/* Container central */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Formulário */
+form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(74, 20, 140, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+
+legend {
+    font-size: 2rem;
+    color: #4a0f81;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+/* Grupos de linha */
+.form-row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Grupo de inputs */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox {
+    position: relative;
+}
+.left-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    background: #fff;
+}
+
+/*.right-panel {
+    display: flex;
+    width: 50%;
+    position: relative;
+    background: #4b0082; Cor de fundo para o gradiente 
+    overflow: hidden;
+} */
+
+/* INPUTS COM ESTILO IGUAL AO LOGIN */
+.inputUser, 
+select {
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+    background: #f3e8ff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #4a0f81;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.inputUser:focus,
+select:focus {
+    background: #fff;
+    border: 2px solid #8e24aa;
+    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5);
+}
+
+.inputUser::placeholder,
+select::placeholder {
+    color: #8e24aa;
+    transition: color 0.3s ease;
+}
+
+.inputUser:focus::placeholder,
+select:focus::placeholder {
+    color: #b85cff;
+}
+
+/* Remove label flutuante */
+.labelInput {
+    display: none;
+}
+
+/* Select label */
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #4a0f81;
+}
+
+/* Botão */
+#submit {
+    background: linear-gradient(to right, #6a1b9a, #4a148c);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 15px;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 20, 140, 0.3);
+}
+
+#submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(74, 20, 140, 0.5);
+    background: linear-gradient(to right, #7b1fa2, #5e35b1);
+}
+
+/* Link voltar */
+a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #4a0f81;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7b1fa2;
+}
