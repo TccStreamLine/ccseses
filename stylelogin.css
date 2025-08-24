@@ -24,6 +24,7 @@ body {
     padding: 0 5%;
     position: relative;
     background: #fff;
+    text-align: center;
 }
 
 .right-panel {
@@ -136,19 +137,19 @@ body {
 .inputLogin input {
     width: 100%;
     padding: 15px 15px 15px 50px;
-    background: #f3e8ff; /* fundo roxo claro */
+    background: #f3e8ff;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     color: #4a0f81;
-    transition: all 0.3s ease; /* transição suave */
+    transition: all 0.3s ease;
     outline: none;
 }
 
 .inputLogin input:focus {
-    background: #fff; /* fundo branco ao focar */
-    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5); /* brilho roxo */
-    border: 2px solid #8e24aa; /* borda roxa ao focar */
+    background: #fff;
+    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5);
+    border: 2px solid #8e24aa;
 }
 
 .inputLogin input::placeholder {
@@ -157,20 +158,22 @@ body {
 }
 
 .inputLogin input:focus::placeholder {
-    color: #b85cff; /* placeholder mais claro ao focar */
+    color: #b85cff;
 }
 
 /* Botão de login alinhado com os campos */
 .inputSubmit {
+    
     background: linear-gradient(to right, #6a1b9a, #4a148c);
     color: #fff;
     font-weight: 600;
-    display: block;
+    display: flex;
     font-size: 1.1rem;
     cursor: pointer;
     border: none;
     padding: 16px;
     border-radius: 12px;
+    margin-right: 300px;
     margin-top: 15px;
     margin-bottom: 15px;
     width: 115%;
@@ -186,7 +189,7 @@ body {
 
 .login-links-container {
     display: flex;
-    justify-content: space-between; /* Alinha um link à esquerda e outro à direita */
+    justify-content: space-between;
     margin-top: 10px;
     align-items: center;
 }
@@ -205,7 +208,7 @@ body {
 
 .forgot:hover {
     color: #fff;
-    background: rgba(106, 27, 154, 0.7); /* Roxo com transparência */
+    background: rgba(106, 27, 154, 0.7);
     text-decoration: none;
 }
 
@@ -214,4 +217,85 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
+}
+
+img {
+    width: 900px;
+}
+
+.logo {
+    width: 300px;
+    margin-top: -35px;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-panel {
+        padding: 40px 20px;
+    }
+
+    .right-panel {
+        display: none;
+    }
+
+    .login-content {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .main-login-title {
+        font-size: 2.5rem;
+    }
+
+    .login-slogan {
+        font-size: 1rem;
+    }
+
+    .header-logo,
+    .nav-links {
+        position: static;
+        width: auto;
+        margin: 0 auto;
+        padding: 0;
+        top: auto;
+        left: auto;
+        right: auto;
+        justify-content: center;
+    }
+
+    .header-logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .inputSubmit {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    /* Alinha o contêiner de links do formulário no mobile */
+    .login-links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
