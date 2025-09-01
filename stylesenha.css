@@ -71,8 +71,8 @@ body {
     margin-top: 0; /* Removido margem fixa */
     margin-left: 40px;
 }
-    
-.textbox{
+
+.textbox {
     color: #888;
     font-size: 1.1rem;
     margin-bottom: 40px; /* Espaço para o campo de input */
@@ -126,7 +126,7 @@ body {
 
 .input-email input:focus {
     background: #fff;
-    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5); 
+    box-shadow: 0 0 8px rgba(142, 12, 202, 0.5);
     border: 2px solid #8e24aa;
 }
 
@@ -155,7 +155,7 @@ body {
 
 /* Logo */
 .logo {
-      width: 500px;
+    width: 500px;
     margin-bottom: -260px;
     margin-left: 100px;
 }
@@ -165,7 +165,6 @@ body {
     position: absolute;
     width: 890px;
     right: 0;
-   ; /* Ajusta a posição vertical */
     z-index: 1; /* Garante que a imagem fique sobre o fundo */
     margin-top: -60px;
 }
@@ -190,7 +189,116 @@ body {
     text-decoration: none;
 }
 
-html, body {
-    height: 100%;
-    overflow: hidden; /* Remove scroll */
+.error-message {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 40px; /* Espaço para o campo de input */
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Telas até 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-panel {
+        padding: 40px 20px;
+    }
+
+    .right-panel {
+        display: none;
+    }
+
+    .logo {
+        width: 300px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .recsenha {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .textbox {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .inputSubmit {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .input-email {
+        width: 100%;
+    }
+
+    .input-email input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .forgot {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .error-message {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+}
+
+/* Telas até 576px (celulares pequenos) */
+@media (max-width: 576px) {
+    .logo {
+        width: 250px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .recsenha {
+        font-size: 1.8rem;
+    }
+
+    .textbox {
+        font-size: 0.9rem;
+    }
+
+    .inputSubmit {
+        font-size: 1rem;
+    }
+
+    .input-email input {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forgot {
+        font-size: 0.8rem;
+    }
 }
